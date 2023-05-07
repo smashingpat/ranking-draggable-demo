@@ -1,0 +1,52 @@
+.button {
+  border-radius: 0.3em;
+  position: relative;
+  background: #35e48d;
+  color: white;
+  padding: var(--spacing);
+  width: 100%;
+  font-weight: bold;
+  text-align: center;
+
+  &[disabled] {
+    cursor: not-allowed;
+  }
+
+  &:not([disabled]) {
+    &:hover {
+      translate: 0 -2px;
+    }
+
+    &:active {
+      translate: 0 0;
+    }
+  }
+
+  &.isPending::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 1em;
+    height: 1em;
+    border: 0.2em solid currentColor;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: 1s linear spin infinite;
+  }
+}
+
+@keyframes spin {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
+  }
+}
+
+.button.isPending .inner {
+  opacity: 0;
+}

@@ -9,13 +9,20 @@
   font-size: 2em;
 }
 
-.list {
+.listWrapper {
   display: flex;
   align-items: stretch;
+  width: 100%;
+  gap: var(--spacing);
+  margin-bottom: calc(var(--spacing) * 2);
+}
+
+.list {
+  flex: 1;
 }
 
 .listItem {
-  padding: 0.5em;
+  padding: 0.5em 0;
 }
 
 .rankings {

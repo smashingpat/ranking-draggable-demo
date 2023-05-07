@@ -6,6 +6,7 @@ import {
 } from 'react-beautiful-dnd';
 
 interface Props<T extends { id: string }> {
+  className?: string;
   items: T[];
   onChange: (items: T[]) => any;
   render: (info: { item: T; isDragging: boolean }) => JSX.Element;
@@ -20,6 +21,7 @@ function reorder<T>(list: T[], startIndex: number, endIndex: number): T[] {
 }
 
 export default function DraggableList<T extends { id: string }>({
+  className,
   items,
   onChange,
   render,
@@ -36,7 +38,11 @@ export default function DraggableList<T extends { id: string }>({
     <DragDropContext onDragEnd={dragEndHandler}>
       <Droppable droppableId="droppable">
         {(provided) => (
-          <div {...provided.droppableProps} ref={provided.innerRef}>
+          <div
+            {...provided.droppableProps}
+            ref={provided.innerRef}
+            className={className}
+          >
             {items.map((item, index) => (
               <Draggable key={item.id} draggableId={item.id} index={index}>
                 {(provided, snapshot) => (

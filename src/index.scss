@@ -21,6 +21,10 @@
   -webkit-text-size-adjust: 100%;
 
   --spacing: 0.5em;
+
+  @media (max-width: 500px) {
+    font-size: 110%;
+  }
 }
 
 body {
@@ -32,4 +36,11 @@ body {
   min-height: 100vh;
   background: #222 url('./assets/background.png') center center;
   background-size: cover;
+}
+
+button {
+  color: inherit;
+  border: none;
+  background: transparent;
+  font-size: inherit;
 }
