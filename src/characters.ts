@@ -1,8 +1,8 @@
-import redPowerRangerImage from './assets/red-power-ranger.png?w=100&h100&fit=cover';
-import bluePowerRangerImage from './assets/blue-power-ranger.png?w=100&h100&fit=cover';
-import yellowPowerRangerImage from './assets/yellow-power-ranger.png?w=100&h100&fit=cover';
-import pinkPowerRangerImage from './assets/pink-power-ranger.png?w=100&h100&fit=cover';
-import blackPowerRangerImage from './assets/black-power-ranger.png?w=100&h100&fit=cover';
+import redPowerRangerImage from './assets/red-power-ranger.jpg';
+import bluePowerRangerImage from './assets/blue-power-ranger.jpg';
+import yellowPowerRangerImage from './assets/yellow-power-ranger.jpg';
+import pinkPowerRangerImage from './assets/pink-power-ranger.jpg';
+import blackPowerRangerImage from './assets/black-power-ranger.jpg';
 
 const characters = [
   { id: '1', name: 'Red Power Ranger', image: redPowerRangerImage },
