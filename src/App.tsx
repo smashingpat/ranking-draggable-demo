@@ -35,8 +35,10 @@ function App() {
       </h1>
       <div className={$.listWrapper}>
         <div className={$.rankings}>
-          {Array.from({ length: ranking.length }, (_, index) => (
-            <span key={index}>{index + 1}</span>
+          {Array.from({ length: characters.length }, (_, index) => (
+            <span className={$.ranking} key={index}>
+              <span>{index + 1}</span>
+            </span>
           ))}
         </div>
         <DraggableList

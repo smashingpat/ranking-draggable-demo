@@ -25,20 +25,25 @@
 
 .listItem {
   padding: 0.5em 0;
+  height: var(--rank-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .rankings {
-  display: flex;
-  flex-direction: column;
+}
 
-  span {
-    flex: 1;
-    font-size: 1.2em;
-    font-weight: bold;
-    text-align: center;
-    display: flex;
-    align-items: center;
-  }
+.ranking {
+  flex: 1;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--rank-height);
+  flex-shrink: 0;
 }
 
 .bottom {
