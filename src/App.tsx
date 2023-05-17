@@ -30,7 +30,7 @@ function App() {
     <div className={$.container}>
       <h1 className={$.title}>
         <button type="button" onClick={addCharacter}>
-          Rankings
+          Mijn ranking
         </button>
       </h1>
       <div className={$.listWrapper}>
@@ -56,7 +56,7 @@ function App() {
       </div>
       <div className={$.bottom}>
         <Button onClick={sendRanking} pending={pending}>
-          Send results
+          Insturen
         </Button>
       </div>
     </div>
